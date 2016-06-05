@@ -1,5 +1,17 @@
-<h1>{{title}}</h1>  
+<div class="container">
 
-<a [routerLink]="['Home']">Home</a>
+    <div class="row">
+        
+        <div class="twelve columns">                
+            <h1>{{title}}</h1>            
+        </div>
 
-<router-outlet></router-outlet>
+        <div class="twelve columns">            
+            <button pButton [routerLink]="['Home']" type="button" label="Home"></button>
+            <button pButton [routerLink]="['Transformers']" type="button" label="Transformers"></button>
+            <router-outlet></router-outlet>                        
+        </div>
+
+    </div>
+
+</div>

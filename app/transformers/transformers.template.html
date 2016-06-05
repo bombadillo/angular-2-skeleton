@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="twelve columns">
+    <h2>{{title}}</h2>
+  </div>
+</div>
+
+<div class="row">
+
+  <div class="twelve columns">
+
+    <p-dataTable [value]="transformers">
+      <p-column *ngFor="let col of cols" [field]="col.field" [header]="col.header"></p-column>
+    </p-dataTable>
+
+  </div>
+
+</div>

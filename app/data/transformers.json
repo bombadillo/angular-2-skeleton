@@ -1,0 +1,15 @@
+[{
+  "id": 1,
+  "name": "Optimus Prime",
+  "faction": "Autobots"
+},
+{
+  "id": 2,
+  "name": "BumbleBee",
+  "faction": "Autobot"
+},
+{
+  "id": 3,
+  "name": "Megatron",
+  "faction": "Decepticons"
+}]
