@@ -8,10 +8,38 @@
 
   <div class="twelve columns">
 
-    <p-dataTable [value]="transformers">
+    <p-dataTable [value]="transformers" (onRowSelect)="onRowSelect($event)">
       <p-column *ngFor="let col of cols" [field]="col.field" [header]="col.header"></p-column>
+      <footer>
+        <div class="ui-helper-clearfix" style="width:100%">
+          <button type="button" pButton icon="fa-plus" (click)="showDialogToAdd()" label="Add"></button>
+        </div>
+      </footer>
     </p-dataTable>
 
   </div>
+
+  <p-dialog header="Car Details" [(visible)]="displayDialog" [responsive]="true" showEffect="fade" [modal]="true">
+    <div class="ui-grid ui-grid-responsive ui-fluid" *ngIf="transformer">
+      <div class="ui-grid-row">
+        <div class="ui-grid-col-4"><label for="id">Id</label></div>
+        <div class="ui-grid-col-8"><input pInputText id="id" [(ngModel)]="transformer.id" /></div>
+      </div>
+      <div class="ui-grid-row">
+        <div class="ui-grid-col-4"><label for="name">Name</label></div>
+        <div class="ui-grid-col-8"><input pInputText id="name" [(ngModel)]="transformer.name" /></div>
+      </div>
+      <div class="ui-grid-row">
+        <div class="ui-grid-col-4"><label for="faction">Faction</label></div>
+        <div class="ui-grid-col-8"><input pInputText id="faction" [(ngModel)]="transformer.faction" /></div>
+      </div>
+    </div>
+    <footer>
+      <div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
+        <button type="button" pButton icon="fa-close" (click)="delete()" label="Delete"></button>
+        <button type="button" pButton icon="fa-check" (click)="save()" label="Save"></button>
+      </div>
+    </footer>
+  </p-dialog>
 
 </div>
