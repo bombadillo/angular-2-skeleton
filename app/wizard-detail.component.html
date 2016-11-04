@@ -1,0 +1,13 @@
+<div *ngIf="wizard">
+    <button (click)="goBack()">Back</button>
+    <h2>{{wizard.name}} details!</h2>
+    <div><label>id: </label>{{wizard.id}}</div>
+    <div>
+        <label>name: </label>
+        <input [(ngModel)]="wizard.name" placeholder="name"/>
+    </div>
+</div>
+
+<div *ngIf="!wizard">
+    <h4>Wizard not found</h4>
+</div>
