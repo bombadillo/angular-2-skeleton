@@ -1,0 +1,6 @@
+<h1>{{title}}</h1> 
+<ul class="wizards">
+    <li *ngFor="let wizard of wizards" (click)="gotoDetail(wizard)">
+    {{wizard.name}}        
+    </li>
+</ul>
