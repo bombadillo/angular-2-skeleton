@@ -9,7 +9,7 @@ import './rxjs-operators';
 import { AppComponent }          from './app.component';
 import { DashboardComponent }    from './dashboard/dashboard.component';
 import { WizardsComponent }      from './wizards/wizards.component';
-import { WizardDetailComponent } from './wizards/wizard-detail.component';
+import { WizardDetailComponent } from './wizards/detail/wizard-detail.component';
 import { WizardService }         from './wizards/services/wizard.service';
 
 import { AppRoutingModule }      from './app-routing.module';

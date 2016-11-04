@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { Wizard }                   from './models/wizard';
-import { WizardDetailComponent }    from './wizard-detail.component';
+import { WizardDetailComponent }    from './detail/wizard-detail.component';
 import { WizardService }            from './services/wizard.service';
 
 @Component({

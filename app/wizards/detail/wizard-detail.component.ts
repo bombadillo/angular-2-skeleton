@@ -1,12 +1,12 @@
 import { Component, Input, OnInit }   from '@angular/core';
 import { ActivatedRoute, Params }     from '@angular/router';
 import { Location }                   from '@angular/common';
-import { Wizard }                     from './models/wizard';
-import { WizardService }              from './services/wizard.service';
+import { Wizard }                     from '../models/wizard';
+import { WizardService }              from '../services/wizard.service';
 
 @Component({
   selector: 'my-wizard-detail',
-  templateUrl: '/app/wizards/wizard-detail.component.html' 
+  templateUrl: '/app/wizards/detail/wizard-detail.component.html' 
 })
 
 export class WizardDetailComponent implements OnInit {
