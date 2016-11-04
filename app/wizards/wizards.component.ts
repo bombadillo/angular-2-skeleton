@@ -6,7 +6,7 @@ import { WizardService }            from './services/wizard.service';
 
 @Component({
   selector: 'my-wizards',
-  templateUrl: '/app/wizards.component.html',
+  templateUrl: '/app/wizards/wizards.component.html',
   providers: [WizardService]
 })
 
