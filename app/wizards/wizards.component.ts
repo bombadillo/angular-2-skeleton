@@ -17,7 +17,7 @@ export class WizardsComponent implements OnInit {
     private router: Router
   ) {}
 
-  title = 'Angular Skeleton';  
+  title = 'All Wizards';  
   wizards: Wizard[];
   selectedWizard: Wizard;
 

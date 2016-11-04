@@ -1,13 +1,31 @@
-<div *ngIf="wizard">
-    <button (click)="goBack()">Back</button>
-    <h2>{{wizard.name}} details!</h2>
-    <div><label>id: </label>{{wizard.id}}</div>
-    <div>
-        <label>name: </label>
-        <input [(ngModel)]="wizard.name" placeholder="name"/>
+<div class="row">
+    <div class="col-xs">
+        <button (click)="goBack()" class="btn btn-primary">Back</button>
     </div>
 </div>
+            
+<div class="row">
+    <div class="col-xs">            
+        <div *ngIf="wizard">            
+            <h2>{{wizard.name}} details!</h2>
 
-<div *ngIf="!wizard">
-    <h4>Wizard not found</h4>
+
+            <form>
+            <div class="form-group">
+                <label for="wizardId">ID</label>
+                <input [(ngModel)]="wizard.id" name="id" type="text" class="form-control" id="wizardId" placeholder="Wizard id">
+            </div>
+            <div class="form-group">
+                <label for="wizardName">Name</label>
+                <input [(ngModel)]="wizard.name" name="name" type="text" class="form-control" id="wizardId" placeholder="Wizard name">
+            </div>
+            </form>
+
+        </div>
+
+        <div *ngIf="!wizard">
+            <h4>Wizard not found</h4>
+        </div>
+    </div>
 </div>
+    

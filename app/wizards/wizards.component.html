@@ -1,6 +1,11 @@
-<h1>{{title}}</h1> 
-<ul class="wizards">
-    <li *ngFor="let wizard of wizards" (click)="gotoDetail(wizard)">
-    {{wizard.name}}        
-    </li>
-</ul>
+<div class="row">
+    <div class="col-xs">
+        <h1>{{title}}</h1> 
+        <div class="wizards list-group">
+            <a href="javascript:void(0)" *ngFor="let wizard of wizards" (click)="gotoDetail(wizard)" class="list-group-item list-group-item-action">
+                <h5>{{wizard.name}}</h5>        
+            </a>
+        </div>    
+    </div>
+</div>
+
